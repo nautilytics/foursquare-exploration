@@ -1,0 +1,18 @@
+{
+  "name": "foursquare-exploration",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/nautilytics/foursquare-exploration.git",
+  "author": "Chris <chris.lanoue@premise.com>",
+  "license": "MIT",
+  "dependencies": {
+    "await-to-js": "^3.0.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^10.0.0",
+    "lodash.kebabcase": "^4.1.1",
+    "node-fetch": "^3.0.0",
+    "redis": "^3.1.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}
