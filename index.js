@@ -29,17 +29,20 @@ const kebabCase = require('lodash.kebabcase');
         const features = venues.map(venue => {
             const {lat, lng, address, city, state, postalCode} = venue.location;
             return {
-                "type": "Feature",
-                "geometry": {
-                    "type": "Point",
-                    "coordinates": [lng, lat],
-                    "properties": {
-                        address,
-                        city,
-                        state,
-                        postalCode,
-                        name: venue.name
-                    }
+                type: "Feature",
+                geometry: {
+                    type: "LineString",
+                    coordinates: [Number(lng), Number(lat)]
+                },
+                properties: {
+                    dataset: 'route',
+                    status: 'ACTIVE',
+                    tags: [`${kebabCase(city)}-metro-targets}`],
+                    address,
+                    city,
+                    state,
+                    postalCode,
+                    name: venue.name
                 }
             }
         })
