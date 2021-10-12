@@ -6,19 +6,28 @@ const query = require('./caching/api-query');
 const fs = require('fs');
 const kebabCase = require('lodash.kebabcase');
 
+const TARGET_CHAIN_ID = '556e119fa7c82e6b725012dd';
+const WALMART_CHAIN_ID = '556f676fbd6a75a99038d8e6';
+const BIG_BOX_STORE_CATEGORY_ID = '52f2ab2ebcbc57f1066b8b42';
+
 (async () => {
     const cities = [
-        'Houston, TX', 'Dallas, TX',
-        'Detroit, MI', 'Boston, MA',
-        'New York, NY', 'Los Angeles, CA',
-        'Seattle, WA', 'San Francisco, CA',
+        'Houston, TX',
+        'Dallas, TX',
+        'Detroit, MI',
+        'Boston, MA',
+        'New York, NY',
+        'Los Angeles, CA',
+        'Seattle, WA',
+        'San Francisco, CA',
         'San Diego, CA'
     ]
-    for(let city of cities) {
+    for(let metroCity of cities.slice(0, 1)) {
         const request = {
-            near: city,
+            near: metroCity,
             v: '20210817',
             query: 'Target',
+            categoryId: BIG_BOX_STORE_CATEGORY_ID,
             client_id: process.env.FOURSQUARE_CLIENT_ID,
             client_secret: process.env.FOURSQUARE_CLIENT_SECRET
         };
@@ -27,17 +36,23 @@ const kebabCase = require('lodash.kebabcase');
 
         // Save as a GeoJSON file to see where all the locations are - upload to a GIST
         const features = venues.map(venue => {
+            console.log(venue);
             const {lat, lng, address, city, state, postalCode} = venue.location;
             return {
                 type: "Feature",
                 geometry: {
                     type: "LineString",
-                    coordinates: [Number(lng), Number(lat)]
+                    coordinates: [
+                        [Number(lng), Number(lat)],
+                        [Number(lng), Number(lat)],
+                    ]
                 },
                 properties: {
                     dataset: 'route',
                     status: 'ACTIVE',
-                    tags: [`${kebabCase(city)}-metro-targets}`],
+                    tags: [
+                        `${kebabCase(metroCity)}-metro-targets`
+                    ],
                     address,
                     city,
                     state,
@@ -46,8 +61,8 @@ const kebabCase = require('lodash.kebabcase');
                 }
             }
         })
-        console.info(`Starting writing ${city} to GeoJSON`);
-        fs.writeFileSync(`./data/${kebabCase(city)}-target.geojson`, JSON.stringify({
+        console.info(`Starting writing ${metroCity} to GeoJSON`);
+        fs.writeFileSync(`./data/${kebabCase(metroCity)}-target.geojson`, JSON.stringify({
             "type": "FeatureCollection",
             features
         }));

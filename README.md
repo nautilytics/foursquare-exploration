@@ -3,8 +3,10 @@
 ## Summary
 
 This script will loop through `n` cities in the US and return all `Target` store locations
-within a specified radius of the city. The return of the script is a GeoJSON file, but could just as easily be
-a CSV or other file.
+within a specified radius of the city. The return of the script is a GeoJSON file. Once the GeoJSON files
+are generated, you can copy and paste the contents of the files into 
+https://cloud.dev.premise.com/campaign-manager/geometries/create
+to generate route tags for the different Target locations.
 
 [GIST of GeoJSON Results](https://gist.github.com/nautilytics/f09cfae24f1a93ba366d2c14d22ea8a9)
 
