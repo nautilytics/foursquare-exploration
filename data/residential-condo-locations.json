@@ -1,0 +1,1255 @@
+[
+  {
+    "id": "4bc0f16d4cdfc9b6e0d29321",
+    "name": "Vantage Pointe Apartments",
+    "location": {
+      "address": "1281 Ninth Ave",
+      "crossStreet": "at A St",
+      "lat": 32.7185641,
+      "lng": -117.1564151,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.7185641,
+          "lng": -117.1564151
+        }
+      ],
+      "postalCode": "92101",
+      "cc": "US",
+      "neighborhood": "Central San Diego",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "1281 Ninth Ave (at A St)",
+        "San Diego, CA 92101",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "59a58ff24a1cc05dc1703eb3",
+    "name": "IDEA1 Apartments",
+    "location": {
+      "address": "899 Park Blvd",
+      "lat": 32.713702586522835,
+      "lng": -117.15326458404421,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.713702586522835,
+          "lng": -117.15326458404421
+        }
+      ],
+      "postalCode": "92101",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "899 Park Blvd",
+        "San Diego, CA 92101",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4ca0f1a4542b224b2d620aa0",
+    "name": "Park 12 - The Collection",
+    "location": {
+      "address": "100 Park Plaza",
+      "lat": 32.706688,
+      "lng": -117.154887,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.706688,
+          "lng": -117.154887
+        }
+      ],
+      "postalCode": "92101",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "100 Park Plaza",
+        "San Diego, CA 92101",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "56668f79498ef96bb2d01ee9",
+    "name": "Parc One",
+    "location": {
+      "address": "310 Town Center Pkwy",
+      "lat": 32.844094660598785,
+      "lng": -116.98001861572266,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.844094660598785,
+          "lng": -116.98001861572266
+        },
+        {
+          "label": "entrance",
+          "lat": 32.844269,
+          "lng": -116.97905
+        }
+      ],
+      "postalCode": "92071",
+      "cc": "US",
+      "city": "Santee",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "310 Town Center Pkwy",
+        "Santee, CA 92071",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "5d4de29f78bb0e00079383e5",
+    "name": "APEX Luxury Apartments",
+    "location": {
+      "address": "7084",
+      "crossStreet": "Friars Rd.",
+      "lat": 32.770186,
+      "lng": -117.165667,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.770186,
+          "lng": -117.165667
+        }
+      ],
+      "postalCode": "92108",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "7084 (Friars Rd.)",
+        "San Diego, CA 92108",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "5405f748498eccd89642f281",
+    "name": "Swimming Pool",
+    "location": {
+      "lat": 32.870049,
+      "lng": -117.203765,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.870049,
+          "lng": -117.203765
+        }
+      ],
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "San Diego, CA",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "5ad8c9378496ca6ef3d5efe9",
+    "name": "The Villas Apartment Homes",
+    "location": {
+      "lat": 32.86973,
+      "lng": -117.202813,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.86973,
+          "lng": -117.202813
+        }
+      ],
+      "postalCode": "92122",
+      "cc": "US",
+      "city": "圣地亚哥",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "圣地亚哥, CA 92122",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4f43c7ede4b05b69c8089472",
+    "name": "Cresta Bella",
+    "location": {
+      "address": "11035 Via Livorno",
+      "lat": 32.97626309376164,
+      "lng": -117.093246497932,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.97626309376164,
+          "lng": -117.093246497932
+        }
+      ],
+      "postalCode": "92129",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "11035 Via Livorno",
+        "San Diego, CA 92129",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "5f64f9d7205b8f3e45ddb2e8",
+    "name": "The Leo",
+    "location": {
+      "address": "715 15th St",
+      "lat": 32.712882,
+      "lng": -117.150235,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.712882,
+          "lng": -117.150235
+        }
+      ],
+      "postalCode": "92101",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "715 15th St",
+        "San Diego, CA 92101",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4fcfcc99e4b0286d5c8509d3",
+    "name": "Smoke Tree Apartments",
+    "location": {
+      "lat": 32.78083957763019,
+      "lng": -117.03117238696933,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.78083957763019,
+          "lng": -117.03117238696933
+        }
+      ],
+      "postalCode": "92120",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "San Diego, CA 92120",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4b3c16c5f964a520a88125e3",
+    "name": "Del Rio Apartments",
+    "location": {
+      "address": "2288 Fenton Pkwy",
+      "lat": 32.778191344610576,
+      "lng": -117.1290555677063,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.778191344610576,
+          "lng": -117.1290555677063
+        }
+      ],
+      "postalCode": "92108",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "2288 Fenton Pkwy",
+        "San Diego, CA 92108",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4b664445f964a5205b1b2be3",
+    "name": "Villas Of Renaissance",
+    "location": {
+      "address": "5280 Fiore Ter",
+      "crossStreet": "at Renaissance Ave",
+      "lat": 32.870924186189804,
+      "lng": -117.2027341312828,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.870924186189804,
+          "lng": -117.2027341312828
+        },
+        {
+          "label": "entrance",
+          "lat": 32.870595,
+          "lng": -117.203264
+        }
+      ],
+      "postalCode": "92122",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "5280 Fiore Ter (at Renaissance Ave)",
+        "San Diego, CA 92122",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "venuePage": {
+      "id": "60023627"
+    },
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "5df7ccafc02d880007e44d4e",
+    "name": "Vida North Park Apartments",
+    "location": {
+      "address": "4223 Texas St",
+      "lat": 32.7543503,
+      "lng": -117.1386481,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.7543503,
+          "lng": -117.1386481
+        }
+      ],
+      "postalCode": "92104",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "4223 Texas St",
+        "San Diego, CA 92104",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4c77e21a9866ef3b1e1f76e9",
+    "name": "Mira Monte Apartment Homes",
+    "location": {
+      "address": "10360 Maya Linda Rd",
+      "lat": 32.909362615895674,
+      "lng": -117.11754803981235,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.909362615895674,
+          "lng": -117.11754803981235
+        }
+      ],
+      "postalCode": "92126",
+      "cc": "US",
+      "neighborhood": "Mira Mesa",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "10360 Maya Linda Rd",
+        "San Diego, CA 92126",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "54e0101b498eda4a05d79c6b",
+    "name": "The Village Mission Valley Apartment Homes",
+    "location": {
+      "address": "6555 Ambrosia Dr",
+      "lat": 32.7946438,
+      "lng": -117.1085645,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.7946438,
+          "lng": -117.1085645
+        }
+      ],
+      "postalCode": "92124",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "6555 Ambrosia Dr",
+        "San Diego, CA 92124",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4f9dfa57e4b04dd736af3e91",
+    "name": "Circa 37",
+    "location": {
+      "address": "7800 Westside Drive",
+      "crossStreet": "Mission Center Rd",
+      "lat": 32.77685663241412,
+      "lng": -117.1522651104272,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.77685663241412,
+          "lng": -117.1522651104272
+        },
+        {
+          "label": "entrance",
+          "lat": 32.776559,
+          "lng": -117.151836
+        }
+      ],
+      "postalCode": "92108",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "7800 Westside Drive (Mission Center Rd)",
+        "San Diego, CA 92108",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "venuePage": {
+      "id": "83921510"
+    },
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4cbfa8d2b6c4224b92b3f494",
+    "name": "Regents La Jolla",
+    "location": {
+      "address": "9253 Regents Rd",
+      "lat": 32.874392567140774,
+      "lng": -117.21778838820238,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.874392567140774,
+          "lng": -117.21778838820238
+        },
+        {
+          "label": "entrance",
+          "lat": 32.874098,
+          "lng": -117.217984
+        }
+      ],
+      "postalCode": "92037",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "9253 Regents Rd",
+        "San Diego, CA 92037",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4bf58dd8d48988d175941735",
+        "name": "Gym / Fitness Center",
+        "pluralName": "Gyms or Fitness Centers",
+        "shortName": "Gym / Fitness",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/gym_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "5fce92cc44839d19c0d29dd1",
+    "name": "The Villas of Renaissance Apartment Homes",
+    "location": {
+      "address": "5280 Fiore Ter",
+      "lat": 32.87092909,
+      "lng": -117.2027302,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.87092909,
+          "lng": -117.2027302
+        }
+      ],
+      "postalCode": "92122",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "5280 Fiore Ter",
+        "San Diego, CA 92122",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "509eb6f18055193d2d480ab4",
+    "name": "Lake Murray Villa",
+    "location": {
+      "address": "5757 Lake Murray Blvd",
+      "lat": 32.78312433650598,
+      "lng": -117.02617777429278,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.78312433650598,
+          "lng": -117.02617777429278
+        },
+        {
+          "label": "entrance",
+          "lat": 32.783562,
+          "lng": -117.027381
+        }
+      ],
+      "postalCode": "91942",
+      "cc": "US",
+      "city": "La Mesa",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "5757 Lake Murray Blvd",
+        "La Mesa, CA 91942",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "5712db67498eee1add178f7e",
+    "name": "360° Luxury Apartments",
+    "location": {
+      "address": "9065 Sydney Ct",
+      "lat": 32.872862943113546,
+      "lng": -117.20154262118659,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.872862943113546,
+          "lng": -117.20154262118659
+        }
+      ],
+      "postalCode": "92122",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "9065 Sydney Ct",
+        "San Diego, CA 92122",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "51f61dda498e19ec1c92e8d9",
+    "name": "Daybreak",
+    "location": {
+      "lat": 32.785597044015674,
+      "lng": -117.03245511427542,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.785597044015674,
+          "lng": -117.03245511427542
+        }
+      ],
+      "cc": "US",
+      "city": "La Mesa",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "La Mesa, CA",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4bfd4183f61dc9b68bb69ede",
+    "name": "La Jolla International Gardens",
+    "location": {
+      "address": "3417 Lebon Dr",
+      "crossStreet": "Nobel",
+      "lat": 32.867119600799704,
+      "lng": -117.2237121744789,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.867119600799704,
+          "lng": -117.2237121744789
+        }
+      ],
+      "postalCode": "92122",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "3417 Lebon Dr (Nobel)",
+        "San Diego, CA 92122",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4d84f24c02eb5481ce8739f5",
+    "name": "Villa Monair Apartments",
+    "location": {
+      "lat": 32.80935418647773,
+      "lng": -117.21246031289138,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.80935418647773,
+          "lng": -117.21246031289138
+        },
+        {
+          "label": "entrance",
+          "lat": 32.80888,
+          "lng": -117.21152
+        }
+      ],
+      "cc": "US",
+      "country": "United States",
+      "formattedAddress": [
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "55cf41e9498e3e51f9b50210",
+    "name": "WestPark apartments",
+    "location": {
+      "lat": 32.77560899191107,
+      "lng": -117.1510815799267,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.77560899191107,
+          "lng": -117.1510815799267
+        }
+      ],
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "San Diego, CA",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4d51682bdcce224b60bce11b",
+    "name": "Lake Park Condominium Complex",
+    "location": {
+      "address": "5700 Baltimore Dr",
+      "crossStreet": "Lake Murray Blvd",
+      "lat": 32.783487915685406,
+      "lng": -117.0348782038417,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.783487915685406,
+          "lng": -117.0348782038417
+        }
+      ],
+      "postalCode": "91942",
+      "cc": "US",
+      "city": "La Mesa",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "5700 Baltimore Dr (Lake Murray Blvd)",
+        "La Mesa, CA 91942",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "505439d0e4b07ba3e629011c",
+    "name": "Carmel Pacific Ridge",
+    "location": {
+      "address": "5955 Linda Vista Rd",
+      "lat": 32.77082919913538,
+      "lng": -117.18563867220301,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.77082919913538,
+          "lng": -117.18563867220301
+        }
+      ],
+      "postalCode": "92110",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "5955 Linda Vista Rd",
+        "San Diego, CA 92110",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "4be51a9a2457a593102bab15",
+    "name": "Costa Verde Village North",
+    "location": {
+      "address": "La Jolla Village Dr",
+      "crossStreet": "Regents Rd",
+      "lat": 32.869869247656936,
+      "lng": -117.21700217501336,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.869869247656936,
+          "lng": -117.21700217501336
+        }
+      ],
+      "postalCode": "92122",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "La Jolla Village Dr (Regents Rd)",
+        "San Diego, CA 92122",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "5a5458409fca563f2a8f0748",
+    "name": "Shift Apartments",
+    "location": {
+      "address": "1501 Island Ave",
+      "lat": 32.71029738049269,
+      "lng": -117.14987687766552,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.71029738049269,
+          "lng": -117.14987687766552
+        }
+      ],
+      "postalCode": "92101",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "1501 Island Ave",
+        "San Diego, CA 92101",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "517c750ee4b032c96ae7e8ee",
+    "name": "",
+    "location": {
+      "lat": 32.684903,
+      "lng": -117.041041,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.684903,
+          "lng": -117.041041
+        }
+      ],
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "San Diego, CA",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  },
+  {
+    "id": "5579cf81498ea965760d27c9",
+    "name": "Pinnacle on the Park",
+    "location": {
+      "address": "1469 Island Ave",
+      "lat": 32.709748961849755,
+      "lng": -117.15080559253693,
+      "labeledLatLngs": [
+        {
+          "label": "display",
+          "lat": 32.709748961849755,
+          "lng": -117.15080559253693
+        }
+      ],
+      "postalCode": "92101",
+      "cc": "US",
+      "city": "San Diego",
+      "state": "CA",
+      "country": "United States",
+      "formattedAddress": [
+        "1469 Island Ave",
+        "San Diego, CA 92101",
+        "United States"
+      ]
+    },
+    "categories": [
+      {
+        "id": "4d954b06a243a5684965b473",
+        "name": "Residential Building (Apartment / Condo)",
+        "pluralName": "Residential Buildings (Apartments / Condos)",
+        "shortName": "Residential",
+        "icon": {
+          "prefix": "https://ss3.4sqi.net/img/categories_v2/building/apartment_",
+          "suffix": ".png"
+        },
+        "primary": true
+      }
+    ],
+    "referralId": "v-1634836229",
+    "hasPerk": false
+  }
+]
