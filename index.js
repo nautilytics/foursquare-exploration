@@ -28,7 +28,7 @@ const BIG_BOX_STORE_CATEGORY_ID = '52f2ab2ebcbc57f1066b8b42';
         'San Diego, CA'
     ]
     for (let store of stores) {
-        data[store] = {};
+        data[store] = [];
         for (let metroCity of cities) {
             const request = {
                 near: metroCity,
@@ -70,26 +70,30 @@ const BIG_BOX_STORE_CATEGORY_ID = '52f2ab2ebcbc57f1066b8b42';
                     }
                 })
             }
-            data[store][metroCity] = {
-                type: "FeatureCollection",
-                features: venues.map(venue => {
-                    const {lat, lng, address, city, state, postalCode} = venue.location;
-                    return {
-                        type: "Feature",
-                        geometry: {
-                            type: "Point",
-                            coordinates: [Number(lng), Number(lat)]
-                        },
-                        properties: {
-                            address,
-                            city,
-                            state,
-                            postalCode,
-                            name: venue.name
+            data[store].push({
+                city: metroCity,
+                featureCollection: {
+                    type: "FeatureCollection",
+                    features: venues.map(venue => {
+                        const {lat, lng, address, city, state, postalCode} = venue.location;
+                        return {
+                            type: "Feature",
+                            geometry: {
+                                type: "Point",
+                                coordinates: [Number(lng), Number(lat)]
+                            },
+                            properties: {
+                                address,
+                                city,
+                                state,
+                                postalCode,
+                                routeTag: `${kebabCase(metroCity)}-metro-${store.toLowerCase()}s`,
+                                name: venue.name
+                            }
                         }
-                    }
-                })
-            }
+                    })
+                }
+            });
             console.info(`Starting writing ${store} ${metroCity} to GeoJSON`);
             fs.writeFileSync(
                 `./data/${kebabCase(metroCity)}-${store.toLowerCase()}.geojson`,
