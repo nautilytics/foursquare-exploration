@@ -32,10 +32,10 @@ const BIG_BOX_STORE_CATEGORY_ID = '52f2ab2ebcbc57f1066b8b42';
         {store: 'Target', city: 'Los Angeles, CA', tag: 'us-la-food-stores-target'},
         {store: 'Walmart', city: 'Los Angeles, CA', tag: 'us-la-food-stores-walmart'},
     ]
-    for (let store of stores) {
-        data[store] = [];
-        for (let metroCity of cities) {
-            const {name: cityName, region} = metroCity;
+    for (let metroCity of cities) {
+        const {name: cityName, region} = metroCity;
+        data[cityName] = [];
+        for (let store of stores) {
             const request = {
                 near: cityName,
                 v: '20210817',
@@ -78,8 +78,8 @@ const BIG_BOX_STORE_CATEGORY_ID = '52f2ab2ebcbc57f1066b8b42';
                     }
                 })
             }
-            data[store].push({
-                city: cityName,
+            data[cityName].push({
+                storeName: store,
                 featureCollection: {
                     type: "FeatureCollection",
                     features: venues.map(venue => {
