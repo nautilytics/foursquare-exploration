@@ -3,9 +3,11 @@
 
 require('dotenv').config();
 const fs = require('fs');
+const {to} = require("await-to-js");
+const rp = require("request-promise");
 
 (async () => {
-    const data = {};
+    const data = [];
     const stores = [
         'Target',
         'Walmart'
@@ -102,24 +104,36 @@ const fs = require('fs');
     ]
     for (let metroCity of cities) {
         const {name: cityName, region, tags} = metroCity;
-        data[cityName] = [];
+        const locations = [];
         for (let store of stores) {
 
             // Get an existing route tag or create a new one
             const routeTag = tags.find(d => d.store === store);
-            console.log(routeTag);
 
-            // TODO - get feature collection from Location Service
+            // Get feature collection from Location Service
+            const [err, result] = await to(rp({
+                uri: `https://cloud.dev.premise.com/api/webProxy/v2/route/${routeTag.tag}/features?onlyActive=true`,
+                headers: {
+                    accept: 'application/json',
+                    authorization: `Bearer ${process.env.BEARER_TOKEN}`
+                },
+                json: true
+            }));
+            if (err) {
+                console.error(err);
+                process.exit();
+            }
 
             // Save as a GeoJSON file to see where all the locations are - upload to a GIST
-            data[cityName].push({
+            locations.push({
                 storeName: store,
                 featureCollection: {
                     type: "FeatureCollection",
-                    features: []
+                    features: result.collection.features
                 }
             });
         }
+        data.push({city: cityName, region, locations})
     }
     fs.writeFileSync(`./data/store-locations.json`, JSON.stringify(data));
     process.exit()
