@@ -5,6 +5,7 @@ require('dotenv').config();
 const fs = require('fs');
 const {to} = require("await-to-js");
 const rp = require("request-promise");
+const query = require('./caching/web-proxy-query');
 
 (async () => {
     const data = [];
@@ -111,28 +112,42 @@ const rp = require("request-promise");
             const routeTag = tags.find(d => d.store === store);
 
             // Get feature collection from Location Service
-            const [err, result] = await to(rp({
-                uri: `${process.env.WEB_PROXY_PROD_URL}/route/${routeTag.tag}/features`,
-                qs: {
-                  onlyActive: true
-                },
-                headers: {
-                    accept: 'application/json',
-                    authorization: `Bearer ${process.env.BEARER_TOKEN_PROD}`
-                },
-                json: true
-            }));
+            const [err, result] = await to(query(
+                `${process.env.WEB_PROXY_PROD_URL}/route/${routeTag.tag}/features`,
+                {onlyActive: true},
+                process.env.BEARER_TOKEN_PROD,
+                1000 * 60 * 60
+            ));
             if (err) {
                 console.error(err);
                 process.exit();
             }
 
             // Store the locations for use in Portal
+            const tag = result.collection.features[0].properties.tags[0];
+            const features = result.collection.features.map(d => {
+                let geometry = {
+                    type: 'Point',
+                    coordinates: [
+                        d.geometry.coordinates[0][0],
+                        d.geometry.coordinates[0][1],
+                    ]
+                };
+                const {name} = d.properties;
+                return {
+                    geometry,
+                    properties: {
+                        name
+                    },
+                    type: "Feature"
+                };
+            })
             locations.push({
                 storeName: store,
+                routeTag: tag,
                 featureCollection: {
                     type: "FeatureCollection",
-                    features: result.collection.features
+                    features
                 }
             });
         }
