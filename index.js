@@ -112,10 +112,13 @@ const rp = require("request-promise");
 
             // Get feature collection from Location Service
             const [err, result] = await to(rp({
-                uri: `https://cloud.dev.premise.com/api/webProxy/v2/route/${routeTag.tag}/features?onlyActive=true`,
+                uri: `${process.env.WEB_PROXY_PROD_URL}/route/${routeTag.tag}/features`,
+                qs: {
+                  onlyActive: true
+                },
                 headers: {
                     accept: 'application/json',
-                    authorization: `Bearer ${process.env.BEARER_TOKEN}`
+                    authorization: `Bearer ${process.env.BEARER_TOKEN_PROD}`
                 },
                 json: true
             }));
@@ -124,7 +127,7 @@ const rp = require("request-promise");
                 process.exit();
             }
 
-            // Save as a GeoJSON file to see where all the locations are - upload to a GIST
+            // Store the locations for use in Portal
             locations.push({
                 storeName: store,
                 featureCollection: {
