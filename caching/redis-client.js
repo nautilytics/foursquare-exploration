@@ -13,17 +13,17 @@ setInterval(function () {
 }, 1000 * 30);
 
 // ========================
-// Foursquare API Calls
+// API Calls
 // ========================
-redisClient.getCache = (key, next) => {
-    redisClient.get(`four_square:${key}`, (err, result) => {
+redisClient.getCache = (prefix, key, next) => {
+    redisClient.get(`${prefix}:${key}`, (err, result) => {
         if (err || !result) return next(err);
         return next(null, JSON.parse(result));
     });
 };
 
-redisClient.setCache = (key, ttl, data, next) => {
-    redisClient.setex(`four_square:${key}`, ttl, JSON.stringify(data), (err, result) => {
+redisClient.setCache = (prefix, key, ttl, data, next) => {
+    redisClient.setex(`${prefix}:${key}`, ttl, JSON.stringify(data), (err, result) => {
         if (err || !result) return next(err);
         return next(null, result);
     });
