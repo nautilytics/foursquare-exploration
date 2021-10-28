@@ -4,14 +4,13 @@
 require('dotenv').config();
 const fs = require('fs');
 const {to} = require("await-to-js");
-const rp = require("request-promise");
 const query = require('./caching/web-proxy-query');
 
 (async () => {
     const data = [];
     const stores = [
-        'Target',
-        'Walmart'
+        {name: 'Target', imageUrl: '/api/images/template-poc/icon-brand-target.png'},
+        {name: 'Walmart', imageUrl: '/api/images/template-poc/icon-brand-walmart.png'}
     ];
     const cities = [
         {
@@ -109,7 +108,7 @@ const query = require('./caching/web-proxy-query');
         for (let store of stores) {
 
             // Get an existing route tag or create a new one
-            const routeTag = tags.find(d => d.store === store);
+            const routeTag = tags.find(d => d.store === store.name);
 
             // Get feature collection from Location Service
             const [err, result] = await to(query(
@@ -143,7 +142,8 @@ const query = require('./caching/web-proxy-query');
                 };
             })
             locations.push({
-                storeName: store,
+                storeName: store.name,
+                storeImageUrl: store.imageUrl,
                 routeTag: tag,
                 featureCollection: {
                     type: "FeatureCollection",
