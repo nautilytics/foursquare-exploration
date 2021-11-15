@@ -39,10 +39,7 @@ const GROCERY_STORE_CATEGORY_ID = '4bf58dd8d48988d118951735';
             name: 'Houston, TX', region: 'US.TX.RR',
             tags: [
                 {store: 'Target', tag: 'us-houston-food-stores-target'},
-                {store: 'Walmart', tag: 'us-houston-food-stores-walmart'},
-                {store: 'Aldi'},
-                {store: 'Walgreens'},
-                {store: 'Kroger'},
+                {store: 'Walmart', tag: 'us-houston-food-stores-walmart'}
             ]
         },
         {
