@@ -6,6 +6,7 @@
   "author": "Chris <chris.lanoue@premise.com>",
   "license": "MIT",
   "dependencies": {
+    "@turf/turf": "^6.5.0",
     "await-to-js": "^3.0.0",
     "crypto": "^1.0.1",
     "dotenv": "^10.0.0",
