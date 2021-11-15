@@ -5,12 +5,34 @@ require('dotenv').config();
 const fs = require('fs');
 const {to} = require("await-to-js");
 const query = require('./caching/web-proxy-query');
+const apiQuery = require('./caching/api-query');
+const kebabCase = require("lodash.kebabcase");
+const {pointsWithinPolygon, point} = require('@turf/turf');
+
+const BIG_BOX_STORE_CATEGORY_ID = '52f2ab2ebcbc57f1066b8b42';
+const GROCERY_STORE_CATEGORY_ID = '4bf58dd8d48988d118951735';
 
 (async () => {
     const data = [];
+    // TODO - update icon links for ALDI, et al
     const stores = [
-        {name: 'Target', imageUrl: '/api/images/template-poc/icon-brand-target.png'},
-        {name: 'Walmart', imageUrl: '/api/images/template-poc/icon-brand-walmart.png'}
+        {
+            name: 'Target',
+            imageUrl: '/api/images/template-poc/icon-brand-target.png',
+            category: BIG_BOX_STORE_CATEGORY_ID
+        },
+        {
+            name: 'Walmart',
+            imageUrl: '/api/images/template-poc/icon-brand-walmart.png',
+            category: BIG_BOX_STORE_CATEGORY_ID
+        },
+        {
+            name: 'ALDI',
+            imageUrl: '/api/images/template-poc/icon-brand-walmart.png',
+            category: GROCERY_STORE_CATEGORY_ID
+        },
+        {name: 'Walgreens', imageUrl: '/api/images/template-poc/icon-brand-walmart.png'},
+        {name: 'Kroger', imageUrl: '/api/images/template-poc/icon-brand-walmart.png'},
     ];
     const cities = [
         {
@@ -18,6 +40,9 @@ const query = require('./caching/web-proxy-query');
             tags: [
                 {store: 'Target', tag: 'us-houston-food-stores-target'},
                 {store: 'Walmart', tag: 'us-houston-food-stores-walmart'},
+                {store: 'Aldi'},
+                {store: 'Walgreens'},
+                {store: 'Kroger'},
             ]
         },
         {
@@ -101,58 +126,118 @@ const query = require('./caching/web-proxy-query');
                 {store: 'Walmart', tag: 'us-sf-food-stores-walmart'},
             ]
         }
-    ]
-    for (let metroCity of cities) {
+    ].map(city => ({
+        ...city,
+        tags: city.tags.concat([
+            {store: 'ALDI'},
+            {store: 'Walgreens'},
+            {store: 'Kroger'},
+        ])
+    }));
+    for (let metroCity of cities.slice(0, 1)) {
         const {name: cityName, region, tags} = metroCity;
         const locations = [];
-        for (let store of stores) {
+
+        // Get the GeoJSON for the region
+        const [err, result] = await to(query(
+            `${process.env.WEB_PROXY_PROD_URL}/regions/${region}`,
+            {geojson: true},
+            process.env.BEARER_TOKEN_PROD,
+            1000 * 60 * 60
+        ));
+        if (err) {
+            console.error(err);
+            process.exit();
+        }
+
+        // Only keep the multi-polygon geometry
+        const regionGeometry = JSON.parse(result.geometry);
+
+        for (let store of stores.slice(2, 5)) {
 
             // Get an existing route tag or create a new one
             const routeTag = tags.find(d => d.store === store.name);
 
-            // Get feature collection from Location Service
-            const [err, result] = await to(query(
-                `${process.env.WEB_PROXY_PROD_URL}/route/${routeTag.tag}/features`,
-                {onlyActive: true},
-                process.env.BEARER_TOKEN_PROD,
-                1000 * 60 * 60
-            ));
-            if (err) {
-                console.error(err);
-                process.exit();
+            // Retrieve route tag from Ops Console
+            let features = [];
+            let tag;
+            if (routeTag?.tag) {
+
+                // Get feature collection from Location Service
+                const [err, result] = await to(query(
+                    `${process.env.WEB_PROXY_PROD_URL}/route/${routeTag.tag}/features`,
+                    {onlyActive: true},
+                    process.env.BEARER_TOKEN_PROD,
+                    1000 * 60 * 60
+                ));
+                if (err) {
+                    console.error(err);
+                    process.exit();
+                }
+
+                // Store the locations for use in Portal
+                tag = result.collection.features[0].properties.tags[0];
+                features = result.collection.features.map(d => {
+                    let geometry = {
+                        type: 'Point',
+                        coordinates: [
+                            d.geometry.coordinates[0][0],
+                            d.geometry.coordinates[0][1],
+                        ]
+                    };
+                    const {name} = d.properties;
+                    return {
+                        geometry,
+                        properties: {
+                            name
+                        },
+                        type: "Feature"
+                    };
+                })
+
+            } else {  // Create a new route tag based on FourSquare data
+                const request = {
+                    near: cityName,
+                    v: '20210817',
+                    query: store.name,
+                    ...(store.category ? store.category : {}),
+                    client_id: process.env.FOURSQUARE_CLIENT_ID,
+                    client_secret: process.env.FOURSQUARE_CLIENT_SECRET
+                };
+                const results = await apiQuery(request, 1000 * 60 * 60);
+                console.log(results);
+                const venues = results.response.venues;
+                console.log(`${store.name} in ${cityName} venues: ${venues.length}`);
+
+                // Only keep those venues that fall within the region boundary
+                const filteredVenues = venues.filter(venue => {
+                    const {location} = venue;
+                    const {lat, lng} = location;
+                    const venuePoint = point([lng, lat]);
+                    return pointsWithinPolygon(venuePoint, regionGeometry);
+                })
+                console.log(`${store.name} in ${cityName} filtered venues: ${filteredVenues.length}`);
+
+                if (filteredVenues.length) {
+                    // Create a new route tag in dev, QA, and Prod
+                    const tag = `us-${kebabCase(cityName)}-metro-food-stores-${store.name.toLowerCase()}s`;
+
+                    // TODO - write to dev, QA, and Prod
+                }
             }
 
-            // Store the locations for use in Portal
-            const tag = result.collection.features[0].properties.tags[0];
-            const features = result.collection.features.map(d => {
-                let geometry = {
-                    type: 'Point',
-                    coordinates: [
-                        d.geometry.coordinates[0][0],
-                        d.geometry.coordinates[0][1],
-                    ]
-                };
-                const {name} = d.properties;
-                return {
-                    geometry,
-                    properties: {
-                        name
-                    },
-                    type: "Feature"
-                };
-            })
-            locations.push({
-                storeName: store.name,
-                storeImageUrl: store.imageUrl,
-                routeTag: tag,
-                featureCollection: {
-                    type: "FeatureCollection",
-                    features
-                }
-            });
+            // locations.push({
+            //     storeName: store.name,
+            //     storeImageUrl: store.imageUrl,
+            //     routeTag: tag,
+            //     featureCollection: {
+            //         type: "FeatureCollection",
+            //         features
+            //     }
+            // });
         }
-        data.push({city: cityName, region, locations})
+        //data.push({city: cityName, region, locations})
     }
-    fs.writeFileSync(`./data/store-locations.json`, JSON.stringify(data));
+    //fs.writeFileSync(`./data/store-locations.json`, JSON.stringify(data));
     process.exit()
 })()
