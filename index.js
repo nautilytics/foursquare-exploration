@@ -13,7 +13,7 @@ const {createTag, addFeature, getFeature, getFeatureForPortal, getFeatureFromRou
 
 (async () => {
     const data = [];
-    for (let metroCity of cities.slice(0, 1)) {
+    for (let metroCity of cities.slice(5, 6)) {
         const {name: cityName, region, tags} = metroCity;
         console.info(`Working on ${cityName}`);
         const locations = [];
@@ -81,8 +81,7 @@ const {createTag, addFeature, getFeature, getFeatureForPortal, getFeatureFromRou
                     chains: store.chainId,
                     limit: 50
                 };
-                const results = await apiQuery(request, 1000 * 60 * 60 * 24);
-                const venues = results.results;
+                const venues = await apiQuery(request, 1000 * 60 * 60);
                 console.info(`${store.name} in ${cityName} venues: ${venues.length}`);
 
                 // Only keep those venues that fall within the region boundary
@@ -109,8 +108,10 @@ const {createTag, addFeature, getFeature, getFeatureForPortal, getFeatureFromRou
                         console.error(err);
                         process.exit();
                     }
+                    console.info(`Created a new tag - ${tag}`);
 
                     // Add all venues as features to the new route tag
+                    console.info(`Adding ${filteredVenues.length} features to new tag - ${tag}`);
                     for (let filteredVenue of filteredVenues) {
                         const feature = getFeature(filteredVenue, tag);
                         const [err, result] = await to(addFeature(url, token, feature));
@@ -118,8 +119,10 @@ const {createTag, addFeature, getFeature, getFeatureForPortal, getFeatureFromRou
                             console.error(err);
                             process.exit();
                         }
-                        console.info(result.status)
+                        if (String(result.status) !== '201')
+                            console.info(result.status)
                     }
+                    console.info(`Added ${filteredVenues.length} features to new tag - ${tag}`);
 
                     locations.push({
                         storeName: store.name,

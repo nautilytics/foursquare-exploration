@@ -31,9 +31,8 @@ module.exports.addFeature = async (url, token, feature) => {
 }
 
 module.exports.getFeature = (venue, tag) => {
-    const {name, geocodes, location} = venue;
+    const {name, geocodes} = venue;
     const {latitude, longitude} = geocodes?.main;
-    const {address, locality, dma, country, postcode, region} = location;
     return {
         type: "Feature",
         geometry: {
@@ -47,21 +46,14 @@ module.exports.getFeature = (venue, tag) => {
             dataset: 'route',
             status: 'ACTIVE',
             tags: [tag],
-            address,
-            locality,
-            dma,
-            country,
-            region,
-            postcode,
             name
         }
     }
 }
 
 module.exports.getFeatureForPortal = (venue) => {
-    const {name, geocodes, location} = venue;
+    const {name, geocodes} = venue;
     const {latitude, longitude} = geocodes?.main;
-    const {address, locality, dma, country, postcode, region} = location;
     return {
         type: "Feature",
         geometry: {
@@ -72,11 +64,6 @@ module.exports.getFeatureForPortal = (venue) => {
             ]
         },
         properties: {
-            address,
-            locality,
-            country,
-            region,
-            postcode,
             name
         }
     }

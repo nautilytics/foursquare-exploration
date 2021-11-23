@@ -58,7 +58,14 @@ module.exports.cities = [
         tags: [
             {store: 'Target', tag: 'us-houston-food-stores-target'},
             {store: 'Walmart', tag: 'us-houston-food-stores-walmart'},
-
+            {store: 'Aldi', tag: 'us-tx-rr-aldi-stores'},
+            {store: 'Walgreens', tag: 'us-tx-rr-walgreens-stores'},
+            {store: 'Kroger', tag: 'us-tx-rr-kroger-stores'},
+            {store: 'Costco', tag: 'us-tx-rr-costco-stores'},
+            {store: 'Best Buy', tag: 'us-tx-rr-best-buy-stores'},
+            {store: "Kohl's", tag: 'us-tx-rr-kohls-stores'},
+            {store: "The Home Depot", tag: 'us-tx-rr-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-tx-rr-lowes-stores'},
         ]
     },
     {
@@ -66,6 +73,12 @@ module.exports.cities = [
         tags: [
             {store: 'Target', tag: 'us-atlanta-food-stores-target'},
             {store: 'Walmart', tag: 'us-atlanta-food-stores-walmart'},
+            {store: 'Aldi', tag: 'us-ga-fu-aldi-stores'},
+            {store: 'Walgreens', tag: 'us-ga-fu-walgreens-stores'},
+            {store: 'Kroger', tag: 'us-ga-fu-kroger-stores'},
+            {store: 'Best Buy', tag: 'us-ga-fu-best-buy-stores'},
+            {store: 'The Home Depot', tag: 'us-ga-fu-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-ga-fu-lowes-stores'},
         ]
     },
     {
@@ -73,18 +86,40 @@ module.exports.cities = [
         tags: [
             {store: 'Target', tag: 'us-dallas-ftw-food-stores-target'},
             {store: 'Walmart', tag: 'us-dallas-ftw-food-stores-walmart'},
+            {store: 'Aldi', tag: 'us-tx-ds-aldi-stores'},
+            {store: 'Walgreens', tag: 'us-tx-ds-walgreens-stores'},
+            // {store: 'Krogers', tag: 'us-tx-ds-kroger-stores'}, // TODO - orphan and handle
+            {store: 'Costco', tag: 'us-tx-ds-costco-stores'},
+            {store: 'Best Buy', tag: 'us-tx-ds-best-buy-stores'},
+            {store: "Kohl's", tag: 'us-tx-ds-kohls-stores'},
+            {store: "The Home Depot", tag: 'us-tx-ds-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-tx-ds-lowes-stores'},
         ]
     },
     {
         name: 'Detroit, MI', region: 'US.MI.WY', tags: [
             {store: 'Target', tag: 'us-detroit-food-stores-target'},
             {store: 'Walmart', tag: 'us-detroit-food-stores-walmart'},
+            {store: 'Aldi', tag: 'us-mi-wy-aldi-stores'},
+            {store: 'Walgreens', tag: 'us-mi-wy-walgreens-stores'},
+            {store: 'Krogers', tag: 'us-mi-wy-kroger-stores'},
+            {store: 'Costco', tag: 'us-mi-wy-costco-stores'},
+            {store: 'Best Buy', tag: 'us-mi-wy-best-buy-stores'},
+            {store: 'The Home Depot', tag: 'us-mi-wy-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-mi-wy-lowes-stores'},
         ]
     },
     {
         name: 'Chicago, IL', region: 'US.IL.CO', tags: [
             {store: 'Target', tag: 'us-chicago-food-stores-target'},
             {store: 'Walmart', tag: 'us-chicago-food-stores-walmart'},
+            {store: 'Aldi', tag: 'us-il-co-aldi-stores'},
+            {store: 'Walgreens', tag: 'us-il-co-walgreens-stores'},
+            {store: 'Krogers', tag: 'us-il-co-kroger-stores'},
+            {store: 'Costco', tag: 'us-il-co-costco-stores'},
+            {store: 'Best Buy', tag: 'us-il-co-best-buy-stores'},
+            {store: 'The Home Depot', tag: 'us-il-co-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-il-co-lowes-stores'},
         ]
     },
     {
