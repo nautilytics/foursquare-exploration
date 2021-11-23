@@ -30,7 +30,11 @@ function _execute(qs, ttl) {
             .update(JSON.stringify(qs))
             .digest('hex');
         [err, result] = await to(rp({
-            uri: 'https://api.foursquare.com/v2/venues/search',
+            uri: 'https://api.foursquare.com/v3/places/search',
+            headers: {
+                'Accept': 'application/json',
+                'Authorization': process.env.FOURSQUARE_API_KEY
+            },
             qs,
             json: true
         }));
