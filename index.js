@@ -13,7 +13,7 @@ const {createTag, addFeature, getFeature, getFeatureForPortal, getFeatureFromRou
 
 (async () => {
     const data = [];
-    for (let metroCity of cities.slice(5, 6)) {
+    for (let metroCity of cities) {
         const {name: cityName, region, tags} = metroCity;
         console.info(`Working on ${cityName}`);
         const locations = [];

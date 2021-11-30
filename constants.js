@@ -41,7 +41,7 @@ const stores = [
     },
     {
         name: "The Home Depot",
-        imageUrl: '/api/images/template-poc/icon-brand-the-home-depot.png',
+        imageUrl: '/api/images/template-poc/icon-brand-home-depot.png',
         chainId: '46fc4e73-67c0-4449-8639-4e34369a2e15'
     },
     {
@@ -116,6 +116,7 @@ module.exports.cities = [
             {store: 'Aldi', tag: 'us-il-co-aldi-stores'},
             {store: 'Walgreens', tag: 'us-il-co-walgreens-stores'},
             {store: 'Krogers', tag: 'us-il-co-kroger-stores'},
+            {store: "Kohl's", tag: 'us-il-co-kohls-stores'},
             {store: 'Costco', tag: 'us-il-co-costco-stores'},
             {store: 'Best Buy', tag: 'us-il-co-best-buy-stores'},
             {store: 'The Home Depot', tag: 'us-il-co-the-home-depot-stores'},
@@ -126,6 +127,10 @@ module.exports.cities = [
         name: 'Boston, MA', region: 'US.MA.SU', tags: [
             {store: 'Target', tag: 'us-boston-food-stores-target'},
             {store: 'Walmart', tag: 'us-boston-food-stores-walmart'},
+            {store: 'Walgreens', tag: 'us-ma-su-walgreens-stores'},
+            {store: 'Best Buy', tag: 'us-ma-su-best-buy-stores'},
+            {store: 'The Home Depot', tag: 'us-ma-su-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-il-co-lowes-stores'},
         ]
     },
     {
@@ -133,6 +138,11 @@ module.exports.cities = [
         tags: [
             {store: 'Target', tag: 'us-miami-food-stores-target'},
             {store: 'Walmart', tag: 'us-miami-food-stores-walmart'},
+            {store: 'Aldi', tag: 'us-fl-da-aldi-stores'},
+            {store: 'Walgreens', tag: 'us-fl-da-walgreens-stores'},
+            {store: 'Best Buy', tag: 'us-fl-da-best-buy-stores'},
+            {store: 'The Home Depot', tag: 'us-fl-da-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-fl-da-lowes-stores'},
         ]
     },
     {
@@ -140,6 +150,12 @@ module.exports.cities = [
         tags: [
             {store: 'Target', tag: 'us-philadelphia-food-stores-target'},
             {store: 'Walmart', tag: 'us-philadelphia-food-stores-walmart'},
+            {store: 'Aldi', tag: 'us-pa-ph-aldi-stores'},
+            {store: 'Walgreens', tag: 'us-pa-ph-walgreens-stores'},
+            {store: 'Best Buy', tag: 'us-pa-ph-best-buy-stores'},
+            {store: "Kohl's", tag: 'us-pa-ph-kohls-stores'},
+            {store: 'The Home Depot', tag: 'us-pa-ph-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-pa-ph-lowes-stores'},
         ]
     },
     {
@@ -147,6 +163,14 @@ module.exports.cities = [
         tags: [
             {store: 'Target', tag: 'us-phoenix-food-stores-target'},
             {store: 'Walmart', tag: 'us-phoenix-food-stores-walmart'},
+            {store: 'Aldi', tag: 'us-az-ma-aldi-stores'},
+            {store: 'Walgreens', tag: 'us-az-ma-walgreens-stores'},
+            {store: 'Kroger', tag: 'us-az-ma-kroger-stores'},
+            {store: 'Costco', tag: 'us-az-ma-costco-stores'},
+            {store: 'Best Buy', tag: 'us-az-ma-best-buy-stores'},
+            {store: "Kohl's", tag: 'us-az-ma-kohls-stores'},
+            {store: "The Home Depot", tag: 'us-az-ma-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-az-ma-lowes-stores'},
         ]
     },
     {
@@ -154,6 +178,10 @@ module.exports.cities = [
         tags: [
             {store: 'Target', tag: 'us-nyc-food-stores-target'},
             {store: 'Walmart', tag: 'us-nyc-food-stores-walmart'},
+            {store: 'Aldi', tag: 'us-ny-ne-aldi-stores'},
+            {store: 'Walgreens', tag: 'us-ny-ne-walgreens-stores'},
+            {store: 'Best Buy', tag: 'us-ny-ne-best-buy-stores'},
+            {store: "The Home Depot", tag: 'us-ny-ne-the-home-depot-stores'},
         ]
     },
     {
@@ -161,6 +189,13 @@ module.exports.cities = [
         tags: [
             {store: 'Target', tag: 'us-la-food-stores-target'},
             {store: 'Walmart', tag: 'us-la-food-stores-walmart'},
+            {store: 'Aldi', tag: 'us-ca-lo-aldi-stores'},
+            {store: 'Walgreens', tag: 'us-ca-lo-walgreens-stores'},
+            {store: 'Costco', tag: 'us-ca-lo-costco-stores'},
+            {store: 'Best Buy', tag: 'us-ca-lo-best-buy-stores'},
+            {store: "Kohl's", tag: 'us-ca-lo-kohls-stores'},
+            {store: "The Home Depot", tag: 'us-ca-lo-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-ca-lo-lowes-stores'},
         ]
     },
     {
@@ -168,6 +203,11 @@ module.exports.cities = [
         tags: [
             {store: 'Target', tag: 'us-seattle-food-stores-target'},
             {store: 'Walmart', tag: 'us-seattle-food-stores-walmart'},
+            {store: 'Walgreens', tag: 'us-wa-kn-walgreens-stores'},
+            {store: 'Costco', tag: 'us-wa-kn-costco-stores'},
+            {store: 'Best Buy', tag: 'us-wa-kn-best-buy-stores'},
+            {store: "The Home Depot", tag: 'us-wa-kn-the-home-depot-stores'},
+            {store: "Lowe's", tag: 'us-wa-kn-lowes-stores'},
         ]
     },
     {
@@ -175,6 +215,10 @@ module.exports.cities = [
         tags: [
             {store: 'Target', tag: 'us-sf-food-stores-target'},
             {store: 'Walmart', tag: 'us-sf-food-stores-walmart'},
+            {store: 'Walgreens', tag: 'us-ca-sf-walgreens-stores'},
+            {store: 'Costco', tag: 'us-ca-sf-costco-stores'},
+            {store: 'Best Buy', tag: 'us-ca-sf-best-buy-stores'},
+            {store: "Lowe's", tag: 'us-ca-sf-lowes-stores'},
         ]
     }
 ].map(city => {
