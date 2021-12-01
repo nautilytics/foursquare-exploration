@@ -30,6 +30,19 @@ module.exports.addFeature = async (url, token, feature) => {
     })
 }
 
+module.exports.getFeatures = async (url, token, tag) => {
+    return await rp({
+        method: 'GET',
+        uri: `${url}/route/${tag}/features`,
+        qs: {onlyActive: true},
+        headers: {
+            accept: 'application/json',
+            authorization: `Bearer ${token}`
+        },
+        json: true
+    })
+}
+
 module.exports.getFeature = (venue, tag) => {
     const {name, geocodes} = venue;
     const {latitude, longitude} = geocodes?.main;

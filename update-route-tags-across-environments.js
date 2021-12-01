@@ -3,16 +3,20 @@
 
 require('dotenv').config();
 const {to} = require("await-to-js");
-const rp = require("request-promise");
 const query = require('./caching/web-proxy-query');
 const {environmentLookup, cities} = require('./constants');
+const {createTag, addFeature, getFeatures} = require("./utils");
 
 (async () => {
-    for (let metroCity of cities.slice(0, 1)) {
+    for (let metroCity of cities) {
         const {tags} = metroCity;
         console.info(`Starting city - ${metroCity.name}`)
         for (let routeTag of tags) {
 
+            if (!routeTag.tag) {
+                console.info(`Skipping ${routeTag.store} in ${metroCity.name} because it does not exist`)
+                continue;
+            }
             console.info(`Starting tag - ${routeTag.tag}`)
 
             // Get feature collection from prod
@@ -42,15 +46,10 @@ const {environmentLookup, cities} = require('./constants');
             });
 
             // Write feature collection to Location Service in QA and DEV
-            for (let environment of ['qa', 'dev'].slice(1, 2)) {
+            for (let environment of ['qa', 'dev']) {
                 const [url, token] = environmentLookup.get(environment);
                 // Get feature collection from Location Service in each environment
-                const [err, result] = await to(query(
-                    `${url}/route/${routeTag.tag}/features`,
-                    {onlyActive: true},
-                    token,
-                    1000 * 60 * 60
-                ));
+                const [err, result] = await to(getFeatures(url, token, routeTag.tag))
                 if (err) {
                     console.error(err);
                     process.exit();
@@ -62,18 +61,7 @@ const {environmentLookup, cities} = require('./constants');
                     console.info(`performing an update in ${environment} ${url} for ${productionFeatures.length}`);
 
                     // Create the tag
-                    const [err] = await to(rp({
-                        method: 'PUT',
-                        uri: `${url}/route/tags/${routeTag.tag}`,
-                        body: {
-                            active: true,
-                        },
-                        headers: {
-                            accept: 'application/json',
-                            authorization: `Bearer ${token}`
-                        },
-                        json: true
-                    }));
+                    const [err] = await to(createTag(url, token, routeTag.tag));
                     if (err) {
                         console.error(err);
                         process.exit();
@@ -81,18 +69,7 @@ const {environmentLookup, cities} = require('./constants');
 
                     // Take the first 10 features and add to QA or Dev
                     for (let feature of productionFeatures.slice(0, 10)) {
-                        const [err, result] = await to(rp({
-                            method: 'POST',
-                            uri: `${url}/route/features`,
-                            body: {
-                                ...feature,
-                            },
-                            headers: {
-                                accept: 'application/json',
-                                authorization: `Bearer ${token}`
-                            },
-                            json: true
-                        }));
+                        const [err, result] = await to(addFeature(url, token, feature));
                         if (err) {
                             console.error(err);
                             process.exit();
